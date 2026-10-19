@@ -1,0 +1,32 @@
+{
+    "expo": {
+        "name": "Location SMS",
+        "slug": "location-sms-android",
+        "scheme": "locationsms",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "android": {
+            "package": "com.example.locationsms",
+            "permissions": [
+                "ACCESS_FINE_LOCATION",
+                "ACCESS_COARSE_LOCATION",
+                "ACCESS_BACKGROUND_LOCATION",
+                "FOREGROUND_SERVICE",
+                "FOREGROUND_SERVICE_LOCATION",
+                "SEND_SMS",
+                "POST_NOTIFICATIONS"
+            ]
+        },
+        "plugins": [
+            [
+                "expo-location",
+                {
+                    "isAndroidBackgroundLocationEnabled": true,
+                    "isAndroidForegroundServiceEnabled": true,
+                    "locationAlwaysAndWhenInUsePermission": "위치 기반 SMS 알림을 위해 백그라운드 위치 접근이 필요합니다."
+                }
+            ],
+            "./plugins/withSmsModule"
+        ]
+    }
+}
